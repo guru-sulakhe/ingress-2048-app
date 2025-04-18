@@ -22,4 +22,5 @@ module "workstation" {
     --cluster demo-cluster-1 \
     --region us-east-1 \
     --name alb-sample-app \
-    --namespace game-2048 */
+    --namespace game-2048 */ 
+# $ kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.5.4/docs/examples/2048/2048_full.yaml
