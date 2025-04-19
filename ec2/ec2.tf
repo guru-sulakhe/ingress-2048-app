@@ -29,4 +29,15 @@ module "workstation" {
 # $ helm install game-2048
 # $ kubectl get pods -n game-2048 -w
 # $ kubectl get svc -n game-2048
-# $ kubectl get ingress -n game-2048
+# $ kubectl get ingress -n game-2048 
+# checking whether any IAM OIDC provider is already configured
+# $ aws iam list-open-id-connect-providers | grep $oidc_id | cut -d "/" -f4\n
+# if not run the below command  
+# $ eksctl utils associate-iam-oidc-provider --cluster demo-cluster-1 --approve
+# We need to create ALB Controller at which pods should access to AWS Services such as ALB, for that we are creating iam-policy,iam-role
+# $ curl -O https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.11.0/docs/install/iam_policy.json
+# if the iam policy i.,e AWSLoadBalancerControllerIAMPolicy is already created in your AWS account delete and create it through the below command
+/* $ aws iam create-policy \
+    --policy-name AWSLoadBalancerControllerIAMPolicy \
+    --policy-document file://iam_policy.json */
+# 
