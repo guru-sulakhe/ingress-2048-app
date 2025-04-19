@@ -89,3 +89,6 @@ module "workstation" {
 # $ kubectl get deployment -n kube-system aws-load-balancer-controller
 # $ kubectl get pods -n kube-system
 # $ kubectl get deploy -n kube-system
+# $ kubectl get ingress -n game-2048
+# here ingress will create ALB in EC2 resource of AWS
+# copy the ADDRESS of the ingress and paste it on chrome 
