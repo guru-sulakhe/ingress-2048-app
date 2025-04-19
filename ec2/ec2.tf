@@ -78,12 +78,13 @@ module "workstation" {
 # Helm chart will create the actual controller and it will use the service account for running the pod
 # $ helm repo add eks https://aws.github.io/eks-charts
 # $ helm repo update eks
-/*helm install aws-load-balancer-controller eks/aws-load-balancer-controller \            
-  -n kube-system \
-  --set clusterName=<your-cluster-name> \
+/*helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system \            
+  --set clusterName=demo-cluster-1 \
   --set serviceAccount.create=false \
   --set serviceAccount.name=aws-load-balancer-controller \
-  --set region=<region> \
+  --set region=us-east-1 \
   --set vpcId=<your-vpc-id> */
+# in networking tab of demon-cluster-1 of eks you will the vpc_id of your cluster
 # Verify that the deployments are running
 # $ kubectl get deployment -n kube-system aws-load-balancer-controller
+# $ kubectl get pods -n kube-system
