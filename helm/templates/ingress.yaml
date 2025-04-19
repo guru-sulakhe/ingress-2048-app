@@ -18,3 +18,6 @@ spec:
             name: service-2048
             port:
               number: 80
+
+# if ingess is not created then the pods will be accessed from vpc
+# if ingress is created and attached to the service then pods will be accessed through internet

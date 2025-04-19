@@ -27,3 +27,6 @@ module "workstation" {
 # or you can run  these commands $ git clone https://github.com/guru-sulakhe/ingress-2048-app.git
 # $ cd ingress-2048-app/helm
 # $ helm install game-2048
+# $ kubectl get pods -n game-2048 -w
+# $ kubectl get svc -n game-2048
+# $ kubectl get ingress -n game-2048
