@@ -9,5 +9,5 @@ spec:
     targetPort: 80
     protocol: TCP
   type: NodePort
-  selector:
+  selector: #this will create service to deployment with the matching labels
     app.kubernetes.io/name: app-2048

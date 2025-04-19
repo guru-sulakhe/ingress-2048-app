@@ -5,13 +5,13 @@ metadata:
   namespace: game-2048
 spec:
   replicas: 5
-  selector:
+  selector: #this will be used to create pods with the matching labels
     matchLabels:
-      app.kubernetes.io/name: app-2048
+      app.kubernetes.io/name: app-2048 
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: app-2048
+        app.kubernetes.io/name: app-2048 #these are pod related labels
     spec:
       containers:
       - name: app-2048
