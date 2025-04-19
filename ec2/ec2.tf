@@ -88,3 +88,4 @@ module "workstation" {
 # Verify that the deployments are running
 # $ kubectl get deployment -n kube-system aws-load-balancer-controller
 # $ kubectl get pods -n kube-system
+# $ kubectl get deploy -n kube-system
