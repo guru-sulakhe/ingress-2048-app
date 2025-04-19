@@ -11,3 +11,6 @@ spec:
   type: NodePort
   selector: #this will create service to deployment with the matching labels
     app.kubernetes.io/name: app-2048
+
+#service will be created to the deployment.yaml i..e deployment
+#service will use selector to create service to deployment

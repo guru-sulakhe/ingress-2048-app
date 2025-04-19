@@ -7,13 +7,13 @@ metadata:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
 spec:
-  ingressClassName: alb
+  ingressClassName: alb #finds alb
   rules:
   - http:
       paths:
       - path: /
         pathType: Prefix
-        backend: 
+        backend: #forwarding request to service-2048
           service: 
             name: service-2048
             port:
