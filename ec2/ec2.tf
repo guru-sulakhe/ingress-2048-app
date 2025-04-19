@@ -90,5 +90,7 @@ module "workstation" {
 # $ kubectl get pods -n kube-system
 # $ kubectl get deploy -n kube-system
 # $ kubectl get ingress -n game-2048
+# make sure to get READY 2/2 in every resource of kubectl
 # here ingress-controller  read ingress resource and created ALB in EC2 resource of AWS
+# wait untill ALB Status should be in Active
 # copy the ADDRESS of the ingress and paste it on chrome 
